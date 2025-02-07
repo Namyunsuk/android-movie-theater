@@ -39,9 +39,6 @@ jobs:
       - name: Gradle Clean check
         run: ./gradlew clean
 
-      - name: Build with Gradle
-        run: ./gradlew build
-
       - name: Run Test(Unit Test + Android Test)
         run: ./gradlew test
 
