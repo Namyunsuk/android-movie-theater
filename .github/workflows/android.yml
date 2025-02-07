@@ -47,15 +47,15 @@ jobs:
         if: always()
         with:
           files: |
-            ${{ github.workspace }}/**/build/test-results/**/TEST-*.xml
+            ${{ github.workspace }}/**/build/test-results/testDebugUnitTest/TEST-*.xml
 
       - name: Add comments to a Pull Request
         uses: mikepenz/action-junit-report@v4
         if: always()
         with:
           report_paths: |
-            $GITHUB_WORKSPACE/**/build/test-results/testDebugUnitTest/TEST-*.xml
-            $GITHUB_WORKSPACE/**/build/outputs/androidTest-results/**/TEST-*.xml
+            ${{ github.workspace }}/**/build/outputs/androidTest-results/**/TEST-*.xml
+            ${{ github.workspace }}/**/build/test-results/testDebugUnitTest/TEST-*.xml
 
 
 
