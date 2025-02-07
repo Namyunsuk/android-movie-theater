@@ -3,7 +3,7 @@ name: android-ci
 on:
   pull_request:
     branches:
-      - "main"
+      - "step3"
 jobs:
   build:
     name: Check Pull Request
